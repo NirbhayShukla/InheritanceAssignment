@@ -117,7 +117,10 @@ namespace AssignmentInheritance
     {
         static void Main(string[] args)
         {
-            WoodenChair chair=new WoodenChair(5,6,400,"4 SEP","Chair","Card","Wooden","Office",)
+            WoodenChair chair = new WoodenChair(5, 6, 400, "4 SEP", "Chair", "Card", "Wooden", "Office", 200, "Teak");
+            chair.display();
+            Cot cot = new Cot(5, 6, 400, "4 SEP", "Cot", "Card", "Steel","5" , 200 );
+            cot.display();
         }
     }
 }
