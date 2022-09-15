@@ -65,12 +65,17 @@ namespace AssignmentInheritance
         static void Main(string[] args)
         {
             Book book = new Book();
-            Console.WriteLine("Enter bookdetails");
+            Console.WriteLine("Enter Name");
             book.NAME = Console.ReadLine();
+            Console.WriteLine("Enter Title");
             book.TITLE = Console.ReadLine();
+            Console.WriteLine("Enter Author");
             book.AUTHOR = Console.ReadLine();
-            book.ISBN=int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter ISBN");
+            book.ISBN = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter price");
             book.PRICE = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Quantity");
             book.QUANTITY = int.Parse(Console.ReadLine());
             book.show();
         }
