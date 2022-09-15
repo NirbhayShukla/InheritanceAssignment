@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AssignmentInheritance
 {
-    internal class Furniture
+    public class Furniture
     {
         int orderID, quantity, amount;
         string orderDate, furnitureType, paymentMode;
@@ -19,6 +19,11 @@ namespace AssignmentInheritance
             this.orderDate = orderDate;
             this.furnitureType = furnitureType;
             this.paymentMode = paymentMode;
+        }
+
+        public void display()
+        {
+            Console.WriteLine($"OrderID = {orderID} , Quantity = {quantity} , Amount ={amount} , Order Date = {orderDate} , Furniture Type ={furnitureType} , Payment Mode = {paymentMode}");
         }
 
     }
@@ -34,6 +39,12 @@ namespace AssignmentInheritance
             this.purpose = purpose;
             this.rate = rate;
         }
+
+        public void display()
+        {
+            base.display();
+            Console.WriteLine($"Chair Type = {chairType} , Purpose ={purpose} , Rate ={rate}");
+        }
     }
 
     class WoodenChair : Chair {
@@ -42,6 +53,12 @@ namespace AssignmentInheritance
         public WoodenChair(int orderID, int quantity, int amount, string orderDate, string furnitureType, string paymentMode, string chairType, string purpose, int rate, string woodType) : base(orderID, quantity, amount, orderDate, furnitureType, paymentMode, chairType, purpose, rate)
         {
             this.woodType = woodType;
+        }
+
+        public void display()
+        {
+            base.display();
+            Console.WriteLine($"Wood Type = {woodType}");
         }
     }
 
@@ -53,6 +70,12 @@ namespace AssignmentInheritance
         {
             this.steelType=steelType;
         }
+
+        public void display()
+        {
+            base.display();
+            Console.WriteLine($"Steel Type = {steelType}");
+        }
     }
 
     class PlasticChair : Chair
@@ -62,6 +85,12 @@ namespace AssignmentInheritance
         public PlasticChair(int orderID, int quantity, int amount, string orderDate, string furnitureType, string paymentMode, string chairType, string purpose, int rate, string color) : base(orderID, quantity, amount, orderDate, furnitureType, paymentMode, chairType, purpose, rate)
         {
             this.color = color;
+        }
+
+        public void display()
+        {
+            base.display();
+            Console.WriteLine($"Color = {color}");
         }
     }
 
@@ -75,6 +104,20 @@ namespace AssignmentInheritance
             this.cotType = cotType;
             this.capacity = capacity;
             this.rate = rate;
+        }
+
+        public void display()
+        {
+            base.display();
+            Console.WriteLine($"Cot Type = {cotType} , Capacity ={capacity} , Rate ={rate}");
+        }
+    }
+
+    class FurnitureExecution
+    {
+        static void Main(string[] args)
+        {
+            WoodenChair chair=new WoodenChair(5,6,400,"4 SEP","Chair","Card","Wooden","Office",)
         }
     }
 }
